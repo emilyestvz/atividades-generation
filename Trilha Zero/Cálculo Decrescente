@@ -1,0 +1,49 @@
+programa
+{
+    funcao inicio()
+    {
+        // declaração do vetor e variáveis auxiliares
+        inteiro vetor[10]
+        inteiro i, j, maior, temp
+
+        // entrada: valores no vetor
+        vetor[0] = 2
+        vetor[1] = 5
+        vetor[2] = 1
+        vetor[3] = 3
+        vetor[4] = 4
+        vetor[5] = 9
+        vetor[6] = 7
+        vetor[7] = 8
+        vetor[8] = 10
+        vetor[9] = 6
+
+        // ordenação em ordem decrescente
+        para (i = 0; i < 9; i++)
+        {
+            maior = i
+            para (j = i + 1; j < 10; j++)
+            {
+                se (vetor[j] > vetor[maior])
+                {
+                    maior = j
+                }
+            }
+
+            // troca de posições
+            se (maior != i)
+            {
+                temp = vetor[i]
+                vetor[i] = vetor[maior]
+                vetor[maior] = temp
+            }
+        }
+
+        // saída: valores ordenados
+        escreva("Vetor em ordem decrescente: ")
+        para (i = 0; i < 10; i++)
+        {
+            escreva(vetor[i], " ")
+        }
+    }
+}
