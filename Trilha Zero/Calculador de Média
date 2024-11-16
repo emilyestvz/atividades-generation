@@ -1,0 +1,48 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro vetor[10]
+        inteiro i, soma
+        real media
+        cadeia elementos_impares, elementos_pares
+
+        soma = 0
+        elementos_impares = ""
+        elementos_pares = ""
+
+
+        escreva("Digite 10 números inteiros:\n")
+        para (i = 0; i < 10; i++)
+        {
+            escreva("Digite o ", i + 1, "º número: ")
+            leia(vetor[i])
+        }
+
+        // processando...
+        para (i = 0; i < 10; i++)
+        {
+            soma = soma + vetor[i]
+
+            se (i % 2 != 0) // índices ímpares
+            {
+                elementos_impares = elementos_impares + vetor[i] + " "
+            }
+
+            // pares
+            se (vetor[i] % 2 == 0) 
+            {
+                elementos_pares = elementos_pares + vetor[i] + " "
+            }
+        }
+
+        // cálculo da média
+        media =- soma / 10.0
+
+        // saída
+        escreva("\nElementos nos índices ímpares: ", elementos_impares, "\n")
+        escreva("Elementos pares: ", elementos_pares, "\n")
+        escreva("Soma: ", soma, "\n")
+        escreva("Média: ", media, "\n")
+    }
+}
